@@ -1,0 +1,92 @@
+ai_driven_visualisation/
+│
+├── README.md                      # Project documentation
+├── requirements.txt               # Dependencies
+├── config.yaml                    # Configuration settings
+├── setup.py                       # Package installation
+│
+├── app/                           # Frontend application
+│   ├── __init__.py
+│   ├── main.py                    # Streamlit or Gradio interface
+│   ├── components/                # UI components
+│   └── static/                    # Static assets
+│
+├── data/                          # Data storage
+│   ├── raw/                       # Raw input files
+│   ├── processed/                 # Processed datasets
+│   ├── embeddings/                # Vector embeddings
+│   └── outputs/                   # Generated visualizations
+│
+├── src/                           # Core functionality
+│   ├── __init__.py
+│   │
+│   ├── data_ingestion/            # Data ingestion components
+│   │   ├── __init__.py
+│   │   ├── file_handler.py        # File upload and handling
+│   │   └── connectors/            # Database and API connectors
+│   │
+│   ├── preprocessing/             # Data preprocessing
+│   │   ├── __init__.py
+│   │   ├── data_cleaner.py        # Data cleaning utilities
+│   │   ├── schema_standardizer.py # Schema standardization
+│   │   ├── ocr.py                 # Tesseract OCR integration
+│   │   └── pdf_extractor.py       # PDF data extraction
+│   │
+│   ├── rag/                       # RAG framework
+│   │   ├── __init__.py
+│   │   ├── document_processor.py  # Document chunking
+│   │   ├── embedder.py            # Text embedding
+│   │   ├── vector_store.py        # FAISS integration
+│   │   └── retriever.py           # Knowledge retrieval
+│   │
+│   ├── multimodal/                # Multi-modal processing
+│   │   ├── __init__.py
+│   │   ├── data_profiler.py       # Data profiling with pandas-profiling
+│   │   ├── type_detector.py       # Data type detection
+│   │   ├── image_processor.py     # Image processing with OpenCV
+│   │   └── table_processor.py     # Table processing
+│   │
+│   ├── ai_engine/                 # AI core
+│   │   ├── __init__.py
+│   │   ├── llm_manager.py         # LLM initialization and inference
+│   │   ├── prompt_templates.py    # Prompt engineering templates
+│   │   ├── code_generator.py      # Visualization code generation
+│   │   └── narrative_generator.py # Natural language insights
+│   │
+│   ├── visualization/             # Visualization module
+│   │   ├── __init__.py
+│   │   ├── chart_generator.py     # Chart generation logic
+│   │   ├── report_builder.py      # PDF/HTML report creation
+│   │   └── plot_utils.py          # Plotting utilities
+│   │
+│   └── orchestration/             # n8n integration
+│       ├── __init__.py
+│       ├── workflow_manager.py    # n8n workflow management
+│       ├── logger.py              # Logging utilities
+│       └── feedback_collector.py  # User feedback collection
+│
+├── notebooks/                     # Jupyter notebooks for development
+│   └── exploratory/               # Exploratory data analysis
+│
+├── models/                        # Model storage
+│   ├── llm/                       # LLM weights and configs
+│   └── fine_tuned/                # Fine-tuned models
+│
+├── tests/                         # Unit and integration tests
+│   ├── __init__.py
+│   ├── test_data_ingestion.py
+│   ├── test_preprocessing.py
+│   ├── test_rag.py
+│   ├── test_multimodal.py
+│   ├── test_ai_engine.py
+│   └── test_visualization.py
+│
+├── scripts/                       # Utility scripts
+│   ├── train_model.py             # Model training script
+│   ├── evaluate_model.py          # Model evaluation
+│   └── deploy.py                  # Deployment script
+│
+└── n8n_workflows/                 # n8n workflow configurations
+    ├── file_watcher.json          # File watching workflow
+    ├── processing_pipeline.json   # Data processing workflow
+    └── notification.json          # User notification workflow
